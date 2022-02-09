@@ -32,7 +32,7 @@ document.getElementById("form").addEventListener('submit', async (e) =>
 {
     e.preventDefault();
     formElements = document.getElementById("form").elements;
-    data = 
+    playerData = 
     {
         'name':formElements["name"].value,
         'surname':formElements["surname"].value,
@@ -48,7 +48,7 @@ document.getElementById("form").addEventListener('submit', async (e) =>
             Accept: "application/json",
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(data),
+        body: JSON.stringify(playerData),
     })
     .then(window.location = ("./index.html"))
     .catch(error => console.log(error));

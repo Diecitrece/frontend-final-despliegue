@@ -45,7 +45,7 @@ fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterBy
     {
         e.preventDefault();
         let formElements = document.getElementById("form").elements;
-        data = 
+        playerData = 
         {
             'name':formElements["name"].value,
             'surname':formElements["surname"].value,
@@ -61,7 +61,7 @@ fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterBy
                 Accept: "application/json",
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify(data),
+            body: JSON.stringify(playerData),
         })
         .then(window.location = ('./show.html?id='+getParameterByName('id')))
         .catch(error => console.log(error));
