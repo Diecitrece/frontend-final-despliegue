@@ -29,14 +29,14 @@ fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterBy
     for(let team of data["teams"]) 
     {
         row+='<option value="'+team+'"';
-        data["team"] === team ? 'selected':'' 
+        data["player"]["team"] === team ? 'selected':'' 
         row+='>'+team+'</option>>';
     }
     row+= '</select><br><select name="position">';
     for(let position of data["positions"]) 
     {
         row+='<option value="'+position+'"';
-        data["position"] === position ? 'selected':'' 
+        data["player"]["position"] === position ? 'selected':'' 
         row+='>'+position+'</option>>';
     }
     row+='</select><br><button>Edit</button><br></form><a href="./show.html?id='+getParameterByName('id')+'"><button>Go Back</button></a>';
