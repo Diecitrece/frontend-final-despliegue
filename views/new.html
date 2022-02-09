@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Player</title>
+    <link href="../css/global.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="containerRightData">
+            <h1>Create new player</h1>
+            <form method="POST" id="form">
+                <input type="text" name="name" placeholder="Name" required><br>
+                <input type="text" name="surname" placeholder="Sunames" required><br>
+                <input type="number" name="age" placeholder="Age" required min="16"><br>
+
+                <select name="team" id="team">
+
+                </select>
+                <select name="position" id="position">
+
+                </select><br>
+                <button>Create</button><br>
+            </form>
+            <a href="./index.html"><button>Go Back</button></a>
+        </div>
+    </div>
+    <script src="../js/new.js"></script>
+</body>
+</html>

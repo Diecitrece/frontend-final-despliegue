@@ -1,0 +1,113 @@
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: 0px;
+    background-image: url("https://cdn.wallpapersafari.com/50/38/AiZ6xD.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    font-size: large;
+}
+h1
+{
+    font-size: 40px;
+}
+.container
+{
+    margin-right: 10%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    background-color: rgb(106, 255, 106);
+    border: 8px solid black;
+    border-radius: 10px;
+    line-height: 1.5;
+    padding-bottom: 5%;
+}
+button
+{
+    background: none;
+    border: 2px solid black;
+    font-weight: bold;
+    margin: 5px 0px;
+    font-size: 17px;
+}
+button:hover
+{
+    cursor: pointer;
+    border: 3px solid black;
+}
+
+/* Index */
+
+.createPlayer
+{
+    background: none;
+    font-size: 40px;
+    text-decoration: none;
+}
+.createPlayerDiv
+{
+    vertical-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    width: 70%;
+    margin-bottom: 20px;
+}
+.createPlayerHover
+{
+    display: none;
+}
+.createPlayer:hover + .createPlayerHover
+{
+    display: block;
+    font-weight: bold;
+}
+
+.playersContainer
+{
+    padding: 5px;
+    height: 35vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+        width: 10px;
+      }
+      
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background-color: white;
+        border: none;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background-color: black;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: black;
+    }
+
+/* Edit */
+
+form input, form select
+{
+    font-size: 18px;
+    margin: 5px 0px;
+    border: none;
+    padding: 2px;
+}
+form input:focus, form select:focus
+{
+    outline: none;
+}
