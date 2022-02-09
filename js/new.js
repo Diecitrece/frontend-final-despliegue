@@ -50,6 +50,9 @@ document.getElementById("form").addEventListener('submit', async (e) =>
         },
         body: JSON.stringify(playerData),
     })
-    .then(window.location = ("./index.html"))
+    .then(response => 
+    {
+        window.location = ("./index.html");
+    })
     .catch(error => console.log(error));
 })

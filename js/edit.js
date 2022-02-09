@@ -29,14 +29,20 @@ fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterBy
     for(let team of data["teams"]) 
     {
         row+='<option value="'+team+'"';
-        data["player"]["team"] === team ? 'selected':'' 
+        if(data["player"]["team"] == team)
+        {
+            row+='selected';
+        }
         row+='>'+team+'</option>>';
     }
     row+= '</select><br><select name="position">';
     for(let position of data["positions"]) 
     {
         row+='<option value="'+position+'"';
-        data["player"]["position"] === position ? 'selected':'' 
+        if(data["player"]["position"] == position)
+        {
+            row+='selected';
+        }
         row+='>'+position+'</option>>';
     }
     row+='</select><br><button>Edit</button><br></form><a href="./show.html?id='+getParameterByName('id')+'"><button>Go Back</button></a>';
@@ -63,7 +69,7 @@ fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterBy
             },
             body: JSON.stringify(playerData),
         })
-        .then(window.location = ('./show.html?id='+getParameterByName('id')))
+        .then(response =>{window.location = ('./show.html?id='+getParameterByName('id'))})
         .catch(error => console.log(error));
     }) 
 })

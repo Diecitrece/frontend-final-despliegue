@@ -32,7 +32,6 @@ fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterBy
 .catch(error => console.log(error));
 function deletePlayer()
 {
-    
     fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterByName('id') + '?_method=DELETE', 
     {
         method: "POST",
@@ -42,7 +41,9 @@ function deletePlayer()
             "Content-Type": "application/json",
         }
     })
-    .then(response => response.json())
-    .then(window.location = ("./index.html"))
+    .then(response => 
+        {
+            window.location = './index.html';
+        })
     .catch(error => console.log(error));
 }
