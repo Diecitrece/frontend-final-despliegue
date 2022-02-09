@@ -23,7 +23,7 @@ fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterBy
     let row = "<h1>Create new player</h1>";
     row+= '<form id="form">';
     row+= '<input type="text" name="name" placeholder="Name" value="'+data["player"]["name"]+'" required><br>';
-    row+= '<input type="text" name="surname" placeholder="Sunames" value="'+data["player"]["surname"]+'" required><br>';
+    row+= '<input type="text" name="surname" placeholder="Surname" value="'+data["player"]["surname"]+'" required><br>';
     row+= '<input type="number" name="age" placeholder="Age" value="'+data["player"]["age"]+'" required min="16"><br>';
     row+= '<select name="team">';
     for(let team of data["teams"]) 
