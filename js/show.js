@@ -7,7 +7,7 @@ function getParameterByName(name, url = window.location.href)
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
-fetch('http://localhost:3001/players/' + getParameterByName('id'), 
+fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterByName('id'), 
 {
     method: "GET",
     headers: 
@@ -33,7 +33,7 @@ fetch('http://localhost:3001/players/' + getParameterByName('id'),
 function deletePlayer()
 {
     
-    fetch('http://localhost:3001/players/' + getParameterByName('id') + '?_method=DELETE', 
+    fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterByName('id') + '?_method=DELETE', 
     {
         method: "POST",
         headers: 

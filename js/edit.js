@@ -8,7 +8,7 @@ function getParameterByName(name, url = window.location.href)
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 let loaded = false;
-fetch('http://localhost:3001/players/' + getParameterByName('id') + '/edit', 
+fetch('https://backend-final-despliegue.herokuapp.com/players/' + getParameterByName('id') + '/edit', 
 {
     method: "GET",
     headers: 
@@ -53,7 +53,7 @@ fetch('http://localhost:3001/players/' + getParameterByName('id') + '/edit',
             'team':formElements['team'].value,
             'position':formElements['position'].value
         }
-        await fetch('http://localhost:3001/players/'+getParameterByName('id')+'?_method=PUT', 
+        await fetch('https://backend-final-despliegue.herokuapp.com/players/'+getParameterByName('id')+'?_method=PUT', 
         {
             method: "POST",
             headers: 

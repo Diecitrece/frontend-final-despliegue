@@ -1,7 +1,7 @@
 let teamSelector = document.getElementById("team");
 let positionSelector = document.getElementById("position");
 
-fetch('http://localhost:3001/players', 
+fetch('https://backend-final-despliegue.herokuapp.com/players', 
 {
     method: "GET",
     headers: 
@@ -40,7 +40,7 @@ document.getElementById("form").addEventListener('submit', async (e) =>
         'team':formElements['team'].value,
         'position':formElements['position'].value
     }
-    await fetch('http://localhost:3001/players', 
+    await fetch('https://backend-final-despliegue.herokuapp.com/players', 
     {
         method: "POST",
         headers: 

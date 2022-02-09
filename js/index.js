@@ -1,5 +1,5 @@
 //fetch
-fetch('http://localhost:3001/players', 
+fetch('https://backend-final-despliegue.herokuapp.com/players', 
 {
     method: "GET",
     headers: 
